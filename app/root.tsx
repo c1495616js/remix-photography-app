@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -6,13 +6,24 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from '@remix-run/react';
+
+import HomeLayout from '~/components/layout/home.layout';
+import styles from './styles/tailwind.css';
+import carouselStyles from 'react-multi-carousel/lib/styles.css';
 
 export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "New Remix App",
-  viewport: "width=device-width,initial-scale=1",
+  charset: 'utf-8',
+  title: 'New Remix App',
+  viewport: 'width=device-width,initial-scale=1',
 });
+
+export function links() {
+  return [
+    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: carouselStyles },
+  ];
+}
 
 export default function App() {
   return (
@@ -22,7 +33,9 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <HomeLayout>
+          <Outlet />
+        </HomeLayout>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
