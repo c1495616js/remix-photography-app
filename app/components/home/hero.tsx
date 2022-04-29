@@ -13,8 +13,12 @@ const data = [
 
 type Props = typeof data[number];
 const Item = ({ path, title, subTitle }: Props) => (
-  <div className="relative flex flex-col items-center justify-center w-full h-screen">
-    <img src={path} alt="bg" className="object-fill absolute inset-0" />
+  <div className="relative flex flex-col items-center justify-center w-screen h-screen">
+    <img
+      src={path}
+      alt="bg"
+      className="object-cover absolute inset-0 w-full h-screen"
+    />
     <p className="z-10 text-white text-2xl font-RadioCanada">{title}</p>
     <p className="z-10 text-white text-4xl font-RadioCanada">{subTitle}</p>
   </div>
