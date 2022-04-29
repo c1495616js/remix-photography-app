@@ -594,6 +594,14 @@ select {
   outline: 1px auto -webkit-focus-ring-color;
 }
 
+@font-face {
+  font-family: RadioCanada;
+
+  font-wheight: 500;
+
+  src: url(/app/public/fonts/RadioCanada-Regular.ttf);
+}
+
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -643,12 +651,31 @@ select {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .top-0 {
   top: 0px;
 }
 
 .left-0 {
   left: 0px;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .flex {
@@ -663,24 +690,41 @@ select {
   height: 60px;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-4 {
   height: 1rem;
 }
 
-.h-full {
-  height: 100%;
+.max-h-full {
+  max-height: 100%;
 }
 
 .w-full {
   width: 100%;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .px-10 {
@@ -695,4 +739,23 @@ select {
 
 .pt-\[60px\] {
   padding-top: 60px;
+}
+
+.font-RadioCanada {
+  font-family: RadioCanada, Helvetica, Arial, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }

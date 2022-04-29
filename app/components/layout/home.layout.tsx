@@ -7,7 +7,7 @@ const HomeLayout: FC = ({ children }) => {
     <div className="pt-[60px] h-screen">
       {/* nav */}
       <Nav />
-      <main>{children}</main>
+      <main className="max-h-full">{children}</main>
     </div>
   );
 };

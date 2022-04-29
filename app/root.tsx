@@ -10,6 +10,7 @@ import {
 
 import HomeLayout from '~/components/layout/home.layout';
 import styles from './styles/tailwind.css';
+import carouselStyles from 'react-multi-carousel/lib/styles.css';
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
@@ -18,7 +19,10 @@ export const meta: MetaFunction = () => ({
 });
 
 export function links() {
-  return [{ rel: 'stylesheet', href: styles }];
+  return [
+    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: carouselStyles },
+  ];
 }
 
 export default function App() {
